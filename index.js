@@ -1,10 +1,15 @@
-// const Url = "https://gateway.marvel.com/v1/public/characters/1011334?apikey=a0e785c96f13e6b9db090ca904788838"
+const Url = "https://superheroapi.com/api/10218974527823084/2"
+fetch(Url, {
+    method: "GET",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    mode: "no-cors"
+})
 
-// fetch(Url)
-// .then(res => res.json)
-// .then(data => console.log(data.name))
+.then(res => res.json())
+.then(data => console.log(data))
 
-// console.log("hello!")
+console.log("hello!")
 
-// a0e785c96f13e6b9db090ca904788838 marvel api public key
-
+//10218974527823084
