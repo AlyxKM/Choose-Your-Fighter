@@ -3,20 +3,30 @@
     <head>
         <title> Choose Your Fighter</title>
         <script src="index.js" ></script>
-        
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <header></header>
-        <p>"Choose Your Fighter!"</p>
-        <div id="my-fighter"></div>
-            <form id="fighter-dropdown">
-                <select>
+        <div id="header">
+            <p>"Choose Your Fighter!" Image/Banner goes here </p>
+        </div>
+        <div id="my-fighter">
+            <label for="choose"><strong>Choose Your Fighter:</strong></label>
+            <select name="choose">
+                <option>one</option>
+                <option>two</option>
+                <option>three</option>
+            </select>
+        </div>        
+        <div id="enemy-fighter">
+            <label for="enemy"><strong>Choose Your Opponent:</strong></label>
+                <select name="enemy">
                     <option>one</option>
                     <option>two</option>
                     <option>three</option>
                 </select>
-            </form>
-        <div id="enemy-fighter"></div>
-        <div id="start-button"></div>
+        </div>
+        <div id="start-button">
+            <button type="button" onclick="alert('Time to Fight!')">Ready?</button>
+        </div>
     </body>
 </html>
