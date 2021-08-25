@@ -14,7 +14,6 @@ body {
   }
   
   .buttons {
-    background-color: #cccccc;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +51,8 @@ li {
 
   .light-theme {
     color: #000000;
-    background: #f72601;
+    background: #e9eb94;
+    background-position: center;
   }
 
   .btn {
