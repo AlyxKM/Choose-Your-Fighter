@@ -1,15 +1,40 @@
+<!-- Write your comments here -->
 <!DOCTYPE html>
+<style>
+    img {
+        width: 100px;
+        border-radius; 50px;
+        float: left;
+        margin-right: 10px;
+    }
+    
+</style>
 <html lang="en">
-    <head>
-        <title> Choose Your Fighter</title>
-         <link rel="stylesheet" href="style.css" />
-         <script defer src="index.js" ></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Fighter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
     <body>
-        <div id="header">
-            <p>"Choose Your Amiibo Fighter!" Image/Banner goes here </p>
-        </div>
-        <div id="my-fighter">
+        
+        
+<!-- Jason's Banner-->
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1 style="font-size:100px" >Choose Your Amiibo Fighter!</h1>
+              <button>GO FIGHT!</button>
+            </div>
+          </div>
+        
+          <div class="buttons">
+          <!-- Alyx's drop menu's -->
+          <p>NOTE: I NEED TO CENTER THESE</p>
+          <body class="light-theme"></body>
+          <div id="header">
+          </div>
+         <div id="my-fighter">
             <label ><strong>Choose Your Fighter:</strong></label>
             <select class="select-fighter">
                 <option value=" ">Fighters</option>
@@ -40,5 +65,64 @@
         <div id="start-button">
             <button type="button" onclick="alert('Time to Fight!')">Ready?</button>
         </div>
+                <script src="index.js" ></script>
+                <script src="app.js"></script>
+                <noscript>You need to enable JavaScript to view the full site.</noscript> <!-- If JS breaks this will throw a warning-->
+
+          </div>
+        <!-- Scrolling table -->
+        <div class="container">
+            <h1>//JUST A SCROLLING TABLE IF WE NEED //</h1>
+           
+          <table class="table-scroll small-first-col">
+            <thead>
+              <tr>
+              <th>Head 2</th>
+              <th>Head 3</th>
+              <th>Head 4</th>
+              </tr>
+            </thead>
+            <tbody class="body-half-screen">
+              <tr>
+                <td>1</td>
+                <td>First row</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>A very long cell content comes here, just to test it all!!!</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>There is an empty cell above!</td>
+              </tr>
+                <td> Last row</td>
+              </tr>
+            </tbody>
+          </table>
+        
     </body>
 </html>
