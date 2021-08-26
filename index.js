@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 const Url = "https://www.amiiboapi.com/api/amiibo"
 fetch(Url)
 .then(res => res.json())
@@ -20,26 +22,30 @@ fetch(Url)
     // console.log(fightArr);
     // console.log(oppArr);
 
-    const pickCharacter = charObj => {  
+    for(let i = 0; i < fightArr.length; i++) {
+        const charObj = fightArr[i];
+        const option = document.createElement("option");
+        option.textContent = charObj.name;
+        option.value = charObj.name;
+        selectFighter.appendChild(option);
+
+        selectFighter.addEventListener("change", event => {
+            event.preventDefault();
+            pickCharacter();
+    });
+
+    function pickCharacter() {  
         const charName = document.getElementById("character-name");
         const charImg = document.getElementById("character-image");
         charName.textContent = charObj.name;
         charImg.src = charObj.image
     };
-
-    fightArr.forEach(charObj => {
-        selectFighter.addEventListener("change", event => {
-            event.preventDefault();
-            pickCharacter(charObj);
-            console.log(event.target.value)
-         });
-    });
-    
-
-    
+  
+};
 
 });
 
+})
 
 
     // console.log(nessObj.name);
