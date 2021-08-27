@@ -52,31 +52,85 @@ li {
     background-position: center;
   }
 
-  .btn {
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-  }
+  #my-fighter
+    {
+    display: block;
+    position: relative;
+    width: 25px;
+    top: 0px;
+    }
 
-/* Scrolling Table stuff */
+    #my-fighter img
+    {
+    padding: 0;
+    padding-top: 10px;
+    display: block;
+    width: 165px;
+    height: 200px;
+    }
+    
+    #fighter-result 
+    {
+      position: absolute;
+      left: 250px;
+      width: 200px;
+      top: 200px;
+    }
+
+    #fighter-result img
+    {
+      height: 500px;
+      width: 400px;
+    }
+
+    #my-opponent
+    {
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    top: 10px;
+    }
+
+    #my-opponent img
+    {
+      padding: 0;
+      padding-top: 10px;
+      width: 165px;
+      height: 200px;
+    }
+
+    #opponent-result 
+    {
+      position: absolute;
+      right: 500px;
+      width: 200px;
+      top: 200px;
+    }
+
+    #opponent-result img
+    {
+      height: 500px;
+      width: 400px;
+    }
+
+    #start-button {
+      margin: auto;
+      display: block;
+      width: 100px
+    }
+
+
+/* Scrolling Table stuff
   .container{
     padding: 1rem;
     margin: 1rem;
   }
   .table-scroll{
-    /*width:100%; */
+    width:100%; 
     display: block;
     empty-cells: show;
     
-    /* Decoration */
+     Decoration 
     border-spacing: 0;
     border: 1px solid;
   }
@@ -90,10 +144,10 @@ li {
   }
   
   .table-scroll tbody{
-    /* Position */
+     Position 
     display: block; position:relative;
     width:100%; overflow-y:scroll;
-    /* Decoration */
+     Decoration 
     border-top: 1px solid rgba(0,0,0,0.2);
   }
   
@@ -110,7 +164,7 @@ li {
     text-align:left;
   }
   
-  /* Other options */
+   Other options 
   
   .table-scroll.small-first-col td:first-child,
   .table-scroll.small-first-col th:first-child{
@@ -126,4 +180,4 @@ li {
     max-height: 50vh;
   }
   
-  .small-col{flex-basis:10%;}
+  .small-col{flex-basis:10%;} */

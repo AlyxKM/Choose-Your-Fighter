@@ -16,40 +16,47 @@ fetch(Url)
     const fightArr = [mario, peach, kirby, ness];
     const oppArr = [link, zelda, samus, pikachu];
 
-    const selectFighter = document.querySelector(".select-fighter");
-    const selectOpponent = document.querySelector(".select-opponent");
+    // const selectFighter = document.querySelector(".select-fighter");
+    // const selectOpponent = document.querySelector(".select-opponent");
 
-    // console.log(fightArr);
-    // console.log(oppArr);
+    const myFighters = document.getElementById("my-fighter");
+    const myOpponents = document.getElementById("my-opponent");
 
-    for(let i = 0; i < fightArr.length; i++) {
-        const charObj = fightArr[i];
-        const option = document.createElement("option");
-        option.textContent = charObj.name;
-        option.value = charObj.name;
-        selectFighter.appendChild(option);
 
-        selectFighter.addEventListener("change", event => {
-            event.preventDefault();
-            pickCharacter();
+    fightArr.forEach(fightObj => {
+        const fightImg = document.createElement("img");
+        fightImg.src = fightObj.image;
+        myFighters.append(fightImg);
+
+        fightImg.addEventListener("click", event => {
+            const selectFighterImage = document.querySelector("img#fighter-image");
+            selectFighterImage.src = fightObj.image;
+
+            const selectFighterName = document.querySelector("h1#fighter-name");
+            selectFighterName.innerHTML = fightObj.name;
+        });
+        
     });
 
-    function pickCharacter() {  
-        const charName = document.getElementById("character-name");
-        const charImg = document.getElementById("character-image");
-        charName.textContent = charObj.name;
-        charImg.src = charObj.image
-    };
-  
-};
+    oppArr.forEach(oppObj => {
+        const oppImg = document.createElement("img");
+        oppImg.src = oppObj.image;
+        myOpponents.append(oppImg);
+
+        oppImg.addEventListener("click", event => {
+            console.log(oppObj)
+            const selectOpponentImage = document.querySelector("img#opponent-image");
+            selectOpponentImage.src = oppObj.image;
+
+            const selectOpponentName = document.querySelector("h1#opponent-name");
+            selectOpponentName.innerHTML = oppObj.character;
+        })
+    })
+
+
+    });
+        
+
 
 });
 
-})
-
-
-    // console.log(nessObj.name);
-    // console.log(nessObj.image);
-    
-//mario[0],link[51],zelda[59],peach[14],kirby[695],pikachu[684/692],samus[555],ness[716]
-// keys include name, image, gameSeries
