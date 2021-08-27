@@ -119,6 +119,16 @@ li {
       width: 100px
     }
 
+    #username-container {
+      display: block;
+      width: 10px
+    }
+    
+    #username-display {
+      margin: auto;
+      width: 100px
+    }
+
 
 /* Scrolling Table stuff
   .container{

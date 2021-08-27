@@ -55,7 +55,19 @@ fetch(Url)
 
 
     });
-        
+       
+    const createUsername = document.getElementById("submit-username");
+
+    createUsername.addEventListener("submit", event => {
+        event.preventDefault();
+        debugger;
+        const nameInput = event.target.name.value;
+        const usernameDisplay = document.querySelector("#username-display");
+        usernameDisplay.textContent = nameInput;
+        createUsername.reset();
+
+    }
+    )
 
 
 });
